@@ -29,22 +29,22 @@ const mediaItems = [
   },
   {
     id: 2,
-    imageUrl: "https://cdn.pixabay.com/photo/2024/01/25/10/50/mosque-8531576_1280.jpg",
+    imageUrl: "https://cdn.pixabay.com/photo/2024/08/02/21/54/antique-car-8940770_1280.jpg",
     videoUrl: "https://cdn.pixabay.com/video/2022/12/18/143419-782363231_tiny.mp4"
   },
   {
     id: 3,
-    imageUrl: "https://cdn.pixabay.com/photo/2024/01/25/10/50/mosque-8531576_1280.jpg",
+    imageUrl: "https://cdn.pixabay.com/photo/2023/10/10/15/37/motorcycle-8306765_1280.jpg",
     videoUrl: "https://cdn.pixabay.com/video/2023/10/22/186115-877653483_tiny.mp4"
   },
   {
     id: 4,
-    imageUrl: "https://cdn.pixabay.com/photo/2024/01/25/10/50/mosque-8531576_1280.jpg",
+    imageUrl: "https://cdn.pixabay.com/photo/2023/10/07/14/24/smartwatch-8300238_1280.jpg",
     videoUrl: "https://cdn.pixabay.com/video/2024/07/14/221180_tiny.mp4"
   },
   {
     id: 5,
-    imageUrl: "https://cdn.pixabay.com/photo/2024/01/25/10/50/mosque-8531576_1280.jpg",
+    imageUrl: "https://cdn.pixabay.com/photo/2024/06/29/10/13/girl-8861154_1280.png",
     videoUrl: "https://cdn.pixabay.com/video/2024/07/27/223461_tiny.mp4"
   },
   {
