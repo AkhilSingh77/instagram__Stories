@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+p, input, span {
+  margin: 0;
+  padding: 0;
+}
+
+input, select {
+  outline: none;
+  border: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h3, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.wrapper {
+  height: 12.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.wrapper .shift {
+  height: 1.875rem;
+  width: 1.875rem;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .shift:hover {
+  cursor: pointer;
+}
+.wrapper__carousel {
+  padding: 0.3125rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex;
+  gap: 25px;
+  width: 50%;
+  overflow-x: scroll;
+}
+.wrapper__carousel .imgDiv {
+  min-width: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  cursor: grab;
+  border: 4px solid rgb(240, 110, 110);
+}
+.wrapper__carousel .imgDiv--img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.wrapper__carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  gap: 2.5rem;
+}
+.overlay .shiftOverlay {
+  height: 1.875rem;
+  width: 1.875rem;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.overlay .shiftOverlay:hover {
+  cursor: pointer;
+}
+.overlay .cancel {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  scale: 1.5;
+  color: white;
+}
+.overlay .cancel:hover {
+  cursor: pointer;
+}
+.overlay__center {
+  width: 18.75rem;
+  height: 85vh;
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+}
+.overlay__center--video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+.overlay__side {
+  width: 15.625rem;
+  height: 70vh;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+}
+.overlay__side--video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+}
+
+.dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: grab;
+}
+
+.displayNone {
+  display: none !important;
+}
+
+.displayFlex {
+  display: flex !important;
+}
+
+.watched {
+  border: 4px solid gray !important;
+}/*# sourceMappingURL=styles.css.map */

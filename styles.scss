@@ -1,0 +1,150 @@
+@import "scss-components/boilerplate";
+@import "scss-components/colors";
+@import "scss-components/function";
+@import "scss-components/mixin";
+
+.wrapper{
+ 
+  height: pxtorem(200px);
+  @include flexRow(center,center);
+  @include paddingLeftRightSame(20px);
+
+  .shift{
+    height: pxtorem(30px);
+    width: pxtorem(30px);
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    @include flexRow(center,center);
+  }
+  .shift:hover{
+    cursor: pointer;
+  }
+  &__carousel{
+ 
+    padding: pxtorem(5px);
+  
+    margin-left: 5px;
+    margin-right: 5px;
+
+     display: flex;
+     gap:25px;
+     width: 50%;
+     overflow-x: scroll;
+    .imgDiv{
+      min-width: pxtorem(80px); 
+      width: pxtorem(80px) ;
+      height: pxtorem(80px);
+      border-radius: 50%;
+      overflow: hidden;
+      scroll-behavior: smooth;
+      cursor: grab;
+   border: 4px solid  rgb(240, 110, 110);
+      &--img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+  }
+  &__carousel::-webkit-scrollbar {
+    display: none; 
+  }
+}
+.overlay{
+ display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  gap:pxtorem(40px);
+
+  .shiftOverlay{
+    height: pxtorem(30px);
+    width: pxtorem(30px);
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    @include flexRow(center,center);
+  }
+  .shiftOverlay:hover{
+    cursor: pointer;
+  }
+
+  .cancel{
+    position: absolute;
+    top: 20px;
+    right:30px;
+    scale: 1.5;
+    color: white;
+  }
+  .cancel:hover{
+    cursor: pointer;
+  }
+
+  &__center{
+   width: pxtorem(300px);
+   height: 85vh;
+   position: relative;
+    border-radius: 25px;
+    overflow: hidden; 
+   &--video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+   }
+  }
+  &__side{
+    width: pxtorem(250px);
+    height: 70vh;
+  
+      border-radius: 25px;
+    position: relative;
+   
+    overflow: hidden; 
+    &--video{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      z-index: -1; 
+     }
+   }
+   
+  
+}
+
+.dragging{
+  user-select: none;
+  cursor: grab;
+}
+
+.displayNone{
+  display: none !important;
+}
+
+.displayFlex{
+  
+  display: flex !important;
+}
+
+.watched{
+  border:4px solid gray !important;
+}
+
+
+
+
+
