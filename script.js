@@ -10,6 +10,8 @@ const overlayLeftElement = document.querySelector(".left--overlay");
 const overlayRightElement = document.querySelector(".right--overlay");
 const rightMoveOverlay = document.querySelector('.shiftOverlay--right');
 const leftMoveOverlay = document.querySelector('.shiftOverlay--left')
+const rigthOverlayDiv = document.querySelector('.overlay__side--right');
+const leftOverlayDiv = document.querySelector('.overlay__side--left');
 
 
 
@@ -115,9 +117,39 @@ rightMoveOverlay.addEventListener('click',()=>{
     showvideo(value);
    }
   
-  
-  
 
+})
+
+rigthOverlayDiv.addEventListener('click',()=>{
+  let value = centerId + 1;
+  centerId = value;
+  if(value > arrayLength){
+    value = arrayLength;
+    centerId = value;
+    return
+   }
+   else{
+  
+    showvideo(value);
+   }
+  console.log("right")
+})
+
+
+
+leftOverlayDiv.addEventListener('click',()=>{
+  let value = centerId -1;
+  centerId = value;
+   if(value < 1 ){
+    value = 1;
+    centerId = value;
+    return
+  }
+  else{
+
+    showvideo(value);
+  }
+  
 })
 const arrayLength = mediaItems.length;
 console.log(arrayLength);
@@ -249,4 +281,4 @@ const draggingFunctionStop = () => {
 carouselElement.addEventListener('mousedown', draggingFunctionStart);
 carouselElement.addEventListener('mousemove', draggingFunction);
 carouselElement.addEventListener('mouseup', draggingFunctionStop);
-carouselElement.addEventListener('mouseleave', draggingFunctionStop); // In case the user drags out of bounds
+carouselElement.addEventListener('mouseleave', draggingFunctionStop);
