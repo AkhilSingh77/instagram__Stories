@@ -207,7 +207,7 @@ function showvideo(id){
 
  const leftnum = id-1;
  if(leftnum < 1){
-  overlayLeftElement.poster = " https://via.placeholder.com/1280x720?text=No+Video+Available" ;
+  overlayLeftElement.poster = "pics/Story_Finished.jpeg" ;
  }
  else{
 
@@ -216,7 +216,7 @@ function showvideo(id){
 
  const rightnum = id+1;
  if(rightnum > arrayLength){
-  overlayRightElement.poster = " https://via.placeholder.com/1280x720?text=No+Video+Available" ;
+  overlayRightElement.poster = " pics/Story_Finished.jpeg" ;
  }
  else{
 
