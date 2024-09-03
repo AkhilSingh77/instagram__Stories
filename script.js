@@ -97,6 +97,7 @@ leftMoveOverlay.addEventListener('click',()=>{
     return
   }
   else{
+    onChange();
 
     showvideo(value);
   }
@@ -113,7 +114,7 @@ rightMoveOverlay.addEventListener('click',()=>{
     return
    }
    else{
-  
+    onChange();
     showvideo(value);
    }
   
@@ -129,7 +130,7 @@ rigthOverlayDiv.addEventListener('click',()=>{
     return
    }
    else{
-  
+    onChange();
     showvideo(value);
    }
   console.log("right")
@@ -146,7 +147,7 @@ leftOverlayDiv.addEventListener('click',()=>{
     return
   }
   else{
-
+    onChange();
     showvideo(value);
   }
   
@@ -180,6 +181,7 @@ mediaItems.forEach((single) => {
     liElement.classList.add('watched');
   const num = Number(e.currentTarget.id);
   centerId = num;
+  onChange();
     showvideo(num);
     overlayElement.classList.add('displayFlex');
    
@@ -282,3 +284,16 @@ carouselElement.addEventListener('mousedown', draggingFunctionStart);
 carouselElement.addEventListener('mousemove', draggingFunction);
 carouselElement.addEventListener('mouseup', draggingFunctionStop);
 carouselElement.addEventListener('mouseleave', draggingFunctionStop);
+
+
+function onChange(){
+  const allStories = document.querySelectorAll(".imgDiv");
+ allStories.forEach((single)=>{
+ console.log(single.id) ;
+ const num = Number(single.id);
+ if(num === centerId){
+  single.classList.add('watched');
+ }
+ })
+}
+
