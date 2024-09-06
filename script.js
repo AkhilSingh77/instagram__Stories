@@ -133,7 +133,7 @@ rigthOverlayDiv.addEventListener('click',()=>{
     onChange();
     showvideo(value);
    }
-  console.log("right")
+
 })
 
 
@@ -153,7 +153,7 @@ leftOverlayDiv.addEventListener('click',()=>{
   
 })
 const arrayLength = mediaItems.length;
-console.log(arrayLength);
+
 
 
 
